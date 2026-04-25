@@ -8,9 +8,14 @@ st.title("Customer Churn Prediction")
 
 age = st.number_input("Age")
 balance = st.number_input("Balance")
+frequent = st.number_input("frequent flyer")
+services = st.number_input("services opted")
+acc = st.number_input("account linked to social media")
+book = st.number_input("Booked hotel")
+target = st.number_input("target")
 
 if st.button("Predict"):
-    input_data = np.array([[age, balance]])
+    input_data = np.array([[age, balance,frequent,acc,book,target]])
     
     prediction = model.predict(input_data)
 
